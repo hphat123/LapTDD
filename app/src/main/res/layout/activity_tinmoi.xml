@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/ColorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+
+        <ImageView
+            android:id="@+id/img_back_right"
+            android:layout_width="63dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
+            app:tint="@color/White" />
+
+        <TextView
+            android:id="@+id/tv_content_news_small"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="left"
+
+            android:layout_toRightOf="@+id/img_back_right"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Chuyên mục"
+            android:textColor="@color/White"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/img_share_right"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="-284dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toLeftOf="@id/tv_content_news_small"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_share_24"
+            android:stateListAnimator="@xml/animate_scale"
+            app:tint="@color/White" />
+
+        <ImageView
+            android:id="@+id/img_expand_right"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="14dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_more_24"
+            android:stateListAnimator="@xml/animate_scale"
+            app:tint="@color/White" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="661dp">
+
+        <WebView
+            android:id="@+id/wv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:layout_width="36dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</LinearLayout>
